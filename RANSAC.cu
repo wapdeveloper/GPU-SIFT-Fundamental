@@ -26,6 +26,6 @@ __global__ void RANSAC_Fundamental(const Point2Df *src, const Point2Df *dst,int 
     //对基础矩阵归一化以提高噪声的鲁棒性
     //8点法计算基础矩阵
     int ret = GetFundamental(_src, _dst, F);
-    //计算基础矩阵的内维点个数
+    //计算基础矩阵的内围点个数
     inliers[idx] = EvalFundamental(src, dst, pts_num, F, inlier_threshold);
 }
